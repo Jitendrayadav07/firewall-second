@@ -7,6 +7,9 @@ COPY package*.json ./
 RUN npm install --production
 COPY . .
 
+# Copy environment file
+COPY .env .env
+
 EXPOSE 43000
 
 RUN npm install pm2 -g
